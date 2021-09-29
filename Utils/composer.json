@@ -1,0 +1,79 @@
+{
+    "name": "vairogs/cache-utils",
+    "description": "Utils: Cache library utils",
+    "type": "library",
+    "keywords": [
+        "cache",
+        "doctrine",
+        "filesystem",
+        "orm",
+        "phpsed",
+        "predis",
+        "redis",
+        "symfony",
+        "utils",
+        "vairogs"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dāvis Zālītis (k0d3r1s)",
+            "email": "k0d3r1s@vairogs.com",
+            "homepage": "https://github.com/k0d3r1s",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@vairogs.com",
+        "issues": "https://github.com/vairogs/vairogs/issues",
+        "wiki": "https://github.com/vairogs/vairogs/wiki"
+    },
+    "funding": [
+        {
+            "type": "ko-fi",
+            "url": "https://ko-fi.com/k0d3r1s"
+        },
+        {
+            "type": "paypal",
+            "url": "https://www.paypal.com/paypalme/k0d3r1s"
+        },
+        {
+            "type": "issuehunt",
+            "url": "https://issuehunt.io/r/vairogs/vairogs"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0",
+        "doctrine/annotations": "~1.11",
+        "psr/cache": "^1",
+        "symfony/cache": "~5.3",
+        "symfony/config": "~5.3",
+        "symfony/http-kernel": "~5.3",
+        "symfony/security-core": "~5.3",
+        "vairogs/component-utils": "3.x-dev"
+    },
+    "suggest": {
+        "snc/redis-bundle": "For Predis or PhpRedis adapter usage",
+        "doctrine/orm": "For Orm adapter usage",
+        "doctrine/dbal": "For Orm adapter usage",
+        "ext-redis": "For PhpRedis and Predis adapter",
+        "ext-phpiredis": "For PhpRedis adapter"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vairogs\\Cache\\Utils\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.x-dev"
+        },
+        "thanks": {
+            "name": "vairogs/vairogs",
+            "url": "https://github.com/vairogs/vairogs"
+        }
+    }
+}
