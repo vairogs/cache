@@ -13,8 +13,10 @@ use function sprintf;
 
 final readonly class CacheConfiguration implements Dependency
 {
-    public function addSection(ArrayNodeDefinition $rootNode, callable $enableIfStandalone): void
-    {
+    public function addSection(
+        ArrayNodeDefinition $rootNode,
+        callable $enableIfStandalone,
+    ): void {
         $rootNode
             ->children()
             ->arrayNode(Dependency::COMPONENT_CACHE)
@@ -22,8 +24,10 @@ final readonly class CacheConfiguration implements Dependency
         ->end();
     }
 
-    public function registerConfiguration(ContainerConfigurator $container, ContainerBuilder $builder): void
-    {
+    public function registerConfiguration(
+        ContainerConfigurator $container,
+        ContainerBuilder $builder,
+    ): void {
         if (!VairogsBundle::enabled($builder, Dependency::COMPONENT_CACHE)) {
             return;
         }
